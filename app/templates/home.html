@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter of Supply Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Form Name</legend>
+
+                <!-- Vendor Name -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="vendorName">Vendor Name</label>
+                    <div class="col-md-4">
+                        <input id="vendorName" name="vendorName" type="text" placeholder=""
+                            class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- POC Name -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="vendorPOCName">Vendor POC Name</label>
+                    <div class="col-md-4">
+                        <input id="vendorPOCName" name="vendorPOCName" type="text" placeholder=""
+                            class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- POC Title -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="vendorPOCTitle">POC Title</label>
+                    <div class="col-md-4">
+                        <input id="vendorPOCTitle" name="vendorPOCTitle" type="text" placeholder=""
+                            class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="vendorAddress">Address</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="vendorAddress" name="vendorAddress"
+                            placeholder="" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Letterhead -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="letterhead">Letterhead</label>
+                    <div class="col-md-4">
+                        <input id="letterhead" name="letterhead" class="input-file" type="file" required>
+                    </div>
+                </div>
+
+                <!-- Supplier Name -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="supplierName">Supplier Name</label>
+                    <div class="col-md-4">
+                        <input id="supplierName" name="supplierName" type="text" placeholder=""
+                            class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- Supplier POC Name -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="supplierPOCName">Supplier POC Name</label>
+                    <div class="col-md-4">
+                        <input id="supplierPOCName" name="supplierPOCName" type="text"
+                            placeholder="" class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- Supplier POC Title -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="supplierPOCTitle">POC Title</label>
+                    <div class="col-md-4">
+                        <input id="supplierPOCTitle" name="supplierPOCTitle" type="text"
+                            placeholder="" class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- Brands -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="supplierBrands">Brands</label>
+                    <div class="col-md-4">
+                        <input class="form-control" id="supplierBrands" name="supplierBrands"
+                            placeholder="" required></input>
+                    </div>
+                </div>
+
+                <!-- LOS Type -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">LOS Type</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline">
+                            <input type="radio" name="losType" value="NEW" checked="checked" required> NEW CONTRACT
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="losType" value="UPDATE" required> CONTRACT UPDATE
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Contract Number -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="contractNumber">Contract #</label>
+                    <div class="col-md-4">
+                        <input id="contractNumber" name="contractNumber" type="text"
+                            placeholder="" class="form-control input-md" required>
+                    </div>
+                </div>
+
+                <!-- Special SINs -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Special SINs</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="specialSINs" value="[IT]"> Information Technology
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="specialSINs" value="[OFFICE]"> Office Supplies
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-4">
+                        <button type="submit" class="btn btn-primary">Create LOS</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
